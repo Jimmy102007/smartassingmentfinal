@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { 
   ArrowRight, 
   ShieldCheck, 
-  Sun, 
-  Moon, 
   UserPlus, 
   LogIn, 
   Lock, 
@@ -38,8 +36,6 @@ export const LoginPage: React.FC = () => {
     loginAsDemo,
     rememberedAccounts, 
     removeRememberedAccount, 
-    theme, 
-    toggleTheme, 
     language, 
     toggleLanguage, 
     t 
@@ -147,30 +143,13 @@ export const LoginPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#030d1d] text-slate-100 flex flex-col justify-center py-10 sm:px-6 lg:px-8 relative overflow-hidden transition-colors selection:bg-[#0075ff] selection:text-white">
-      {/* Top Controls: Dark/Light Mode & Language Switch */}
+      {/* Top Controls: Language Switch */}
       <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         <button
           onClick={toggleLanguage}
           className="px-3 py-1.5 rounded-2xl bg-[#081d3f] border border-[#14376b] text-[#38bdf8] text-xs font-bold hover:bg-[#0c2b5c] transition-colors cursor-pointer shadow-xs"
         >
           {isThai ? '🇹🇭 ภาษาไทย' : '🇬🇧 English'}
-        </button>
-
-        <button
-          onClick={toggleTheme}
-          className="p-2 px-3 rounded-2xl bg-[#081d3f] border border-[#14376b] text-slate-300 hover:text-white hover:bg-[#0c2b5c] transition-colors flex items-center gap-1.5 text-xs font-bold cursor-pointer shadow-xs"
-        >
-          {theme === 'dark' ? (
-            <>
-              <Moon className="w-3.5 h-3.5 text-[#38bdf8] fill-current" />
-              <span className="hidden sm:inline">{t('darkMode')}</span>
-            </>
-          ) : (
-            <>
-              <Sun className="w-3.5 h-3.5 text-amber-400" />
-              <span className="hidden sm:inline">{t('lightMode')}</span>
-            </>
-          )}
         </button>
       </div>
 
