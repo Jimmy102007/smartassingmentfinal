@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Smart Assignment",
+  "description": "Modern learning and assignment management system for university students to track courses, deadlines, and academic progress.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

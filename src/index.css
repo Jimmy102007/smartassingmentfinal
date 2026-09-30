@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Prompt', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom glow utilities */
+.glow-blue {
+  box-shadow: 0 0 25px -4px rgba(0, 117, 255, 0.45);
+}
+
+.glow-blue-sm {
+  box-shadow: 0 0 15px -2px rgba(0, 117, 255, 0.35);
+}
+
+.border-glow-blue {
+  border-color: rgba(0, 149, 255, 0.35);
+}
+
+/* Modal and Backdrop Animations */
+@keyframes modalScaleFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes backdropFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-modal-scale-fade {
+  animation: modalScaleFade 300ms ease forwards;
+}
+
+.animate-backdrop-fade {
+  animation: backdropFade 300ms ease forwards;
+}
+
+.neon-modal-glow {
+  box-shadow: 0 0 35px rgba(0, 117, 255, 0.45), 0 0 70px rgba(0, 117, 255, 0.2), inset 0 0 15px rgba(0, 117, 255, 0.08);
+}
+
+/* Custom scrollbars for clean minimal university look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 45, 90, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 117, 255, 0.5);
+}
+
